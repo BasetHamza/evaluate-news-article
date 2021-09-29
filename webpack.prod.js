@@ -7,6 +7,11 @@ module.exports = {
     module: {
         rules: [
             // TODO 1: Add babel Loader that match js files as development
+            {
+                test: '/\.js$/',
+                exclude: /node_modules/,
+                loader: "babel-loader"
+            },
             // TODO 2: Add Loaders for
             //    1. converting sass => css
             //    2. Turns css into commonjs

@@ -1,16 +1,30 @@
-// TODO: Configure the environment variables
+// Configure the environment variables
+const dotenv = require('dotenv');
+dotenv.config();
 
+var path = require('path')
 const mockAPIResponse = require('./mockAPI.js')
 
 const PORT = 8081
 
-// TODO add Configuration to be able to use env variables
+// Add Configuration to be able to use env variables
+var textapi = {
+  application_key: process.env.API_KEY,
+};
 
+// Create an instance for the server
+const express = require('express');
+const app = express()
 
-// TODO: Create an instance for the server
-// TODO: Configure cors to avoid cors-origin issue
-// TODO: Configure express to use body-parser as middle-ware.
-// TODO: Configure express static directory.
+// Configure cors to avoid cors-origin issue
+const cors = require('cors');
+app.use(cors());
+
+// Configure express to use body-parser as middle-ware.
+const bodyParser = require('body-parser')
+
+// Configure express static directory.
+app.use(express.static('dist'))
 
 app.get('/', function (req, res) {
     // res.sendFile('dist/index.html')

@@ -1,5 +1,10 @@
 
 // TODO: include your scss file here
+import './styles/resets.scss'
+import './styles/base.scss'
+import './styles/footer.scss'
+import './styles/form.scss'
+import './styles/header.scss'
 
 // TODO: get the button for submit
 // TODO: add event listener to it when the click to call handleSubmit function
@@ -11,3 +16,5 @@
  *      no
  *          show user message it's not valid URL
  */
+
+console.log("Okay!");
